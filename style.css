@@ -6,9 +6,9 @@ body{
     padding: 100px;
     text-align: center;
 }
-content{
+.content{
     color: #020ff69e;
-    font-size: 150px;
+
     margin: 10% 10 20 20;  
     padding: 10;
 }
@@ -16,6 +16,12 @@ img{
     border-radius: 2%;
     height: 200px;
     width: 200px;
+    position: relative;
+}
+img:hover{
+    border-radius: 2%;
+    height: 250px;
+    width: 250px;
     position: relative;
 }
 figure{
