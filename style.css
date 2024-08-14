@@ -8,7 +8,7 @@ body{
 }
 .content{
     color: #020ff69e;
-
+    min-width: 100%;
     margin: 10% 10 20 20;  
     padding: 10;
 }
