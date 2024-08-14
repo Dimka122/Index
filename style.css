@@ -40,10 +40,27 @@ footer {
     float: right;
     margin: 7px 0 7px 7px;
     }
-    header{
-        background-color: #45a1ff;
-        color: #fff;
-        
-        padding: 5px;
-        text-align: center;
+.header{
+    background-color: #45a1ff;
+    color: #fff;      
+    padding: 5px;
+    text-align: center;
     }
+.main{
+    padding: 0;
+    margin: 0;
+    font-family: verdana, arial, sans-serif;
+    display: flex;
+    padding: 1em;
+    flex-direction: column;
+    }
+.item {
+    background-color: #455a64;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 1em;
+    flex: 1;
+}
+
+.item:nth-child(1) {
+    background-color: #607d8b;}
