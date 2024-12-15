@@ -15,6 +15,14 @@
   box-sizing: border-box;
 }
 
+a{
+  color: white;
+}
+
+a:hover{
+  color: var(--color-brand-light);
+}
+
 body{
   color: var(--color-primary-dark);
   background-color: var(--color-background);
@@ -44,7 +52,7 @@ ul{
 
 
 .header{
-  background-color: grey;
+  background-color: rgb(207, 203, 203);
 }
 
 .header-container{
@@ -163,7 +171,7 @@ ul{
   color: var(--color-brand-dark);
 }
 
-
+/* traditions-section */
 
 .traditions-container{
   display: flex;
@@ -182,6 +190,7 @@ ul{
   max-width: 340px;
 }
 
+/* formats-section */
 
 .formats-container{
   display: flex;
@@ -258,6 +267,8 @@ ul{
   margin-bottom: 16px;
 }
 
+/*chefs-section*/
+
 .chefs-title{
   margin: 0 auto 80px;
   max-width: 520px;
@@ -318,6 +329,8 @@ ul{
 .chef-text p:last-child{
   margin-bottom: 0;
 }
+
+/* footer */
 
 .address.link{
   color: var(--color-primary-light);
