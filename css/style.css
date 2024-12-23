@@ -100,7 +100,7 @@ ul{
 .button{
   color: var(--color-primary-light);
   border: 2px solid var(--color-primary-dark);
-  background: var(--color-brand-dark);
+  background: var(--color-brand-light);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -271,13 +271,25 @@ ul{
 
 .chefs-title{
   margin: 0 auto 80px;
-  max-width: 520px;
+  /*max-width: 520px;*/
+  position: relative;
 }
 
 .chefs-title .accent{
   color: var(--color-brand-dark);
 }
 
+.chefs-title::before{
+  position: absolute;
+  left: 0px;
+  bottom: 24px;
+}
+
+.chefs-title::after{
+  position: absolute;
+  right: 0px;
+  bottom: 24px;
+}
 
 .chefs-title::before,
 .chefs-title::after{
@@ -332,6 +344,57 @@ ul{
 
 /* footer */
 
+.footer{
+  position: relative;
+  background-color: var(--color-primary-dark);
+  background-image: url('../images/Hleb.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 50%;
+}
+
+footer::before{
+  content: '';
+  position: absolute;
+  width:180px ;
+  height: 120px;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: url('../images/dekor-bread-mmm.png');
+}
+
+footer::after{
+  content: '';
+  position: absolute;
+  width:380px ;
+  height: 190px;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-image: url('../images/dekor-bread-mmm.png');
+}
+
+.footer-container{
+  display: flex;
+}
+
+.footer-nav,.footer-address{
+  flex-basis: 50%;
+  display: flex;
+  flex-grow: 1;
+}
+.address-list,
+.address-info{
+  flex-grow: 1;
+}
+
+.footer-logo,.footer-menu{
+  flex-grow: 1;
+}
+
+
 .address.link{
   color: var(--color-primary-light);
   font-size: 16px;
@@ -355,33 +418,37 @@ ul{
   fill: var(--color-brand-dark);
 }
 
+/*Modal*/
 
-
-.footer{
-  color: white;
-  background-color: var(--color-primary-dark);
-  background-image: url('../images/Hleb.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity: 80%;
-}
-
-.footer-container{
+.backdrop{
+ position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.5);
 }
 
-.footer-nav,.footer-address{
-  flex-basis: 50%;
-  display: flex;
-  flex-grow: 1;
-}
-.address-list,
-.address-info{
-  flex-grow: 1;
+.backdrop.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
-.footer-logo,.footer-menu{
-  flex-grow: 1;
+.modal{
+  position: relative;
+  width: 580px;
+  height: 580px;
+  background-color: var(--color-primary-light);
+  border-radius: 32px;
+  box-shadow: 0 0 16px 0 rgba(0,0,0,0.1);
 }
 
+.modal-btn-close{
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
