@@ -15,12 +15,12 @@
             <img src="./images/logo.svg" alt="Логотип пекарни"/>
           </a>
           <ul class="header-menu">
-            <li><a href="#">Франшиза</a></li>
-            <li><a href="#traditions-section">Наши традиции</a></li>
-            <li><a href="#format-section">Форматы</a></li>
-            <li><a href="#contakt-section">Контакты</a></li>
+            <li><a class="link" href="#">Франшиза</a></li>
+            <li><a class="link" href="#traditions-section">Наши традиции</a></li>
+            <li><a class="link" href="#format-section">Форматы</a></li>
+            <li><a class="link" href="#contakt-section">Контакты</a></li>
           </ul>
-        <button class="modal-btn-open" type="button">Заказать звонок</button>
+        <button class="button modal-btn-open" type="button">Заказать звонок</button>
       </nav>
      </div>
     </div>
@@ -204,6 +204,50 @@
           <div class="contact-form">
             <h2 class="section-title">Присоединяйтесь к нашей сети пекарен</h2>
             <p>Заполни форму, чтобы мы связались с вами.</p>
+
+            <form name="order-call-form" autocomplete="on">
+
+              <div class="form-field">
+                <label class="form-label visually-hidden" for="user-name">Имя</label>
+                <input 
+                class="form-input" 
+                type="text" 
+                id="user-name" 
+                name="user-name" 
+                placeholder="Имя"
+                required/>
+              </div>
+                
+              <div class="form-field">
+                <label class="form-label visually-hidden" for="user-tel">Телефон</label>
+                <input 
+                class="form-input" 
+                type="tel" 
+                id="user-tel" 
+                name="user-tel" 
+                placeholder="Телефон"
+                required/>
+              </div>
+              
+              <div class="form-field">
+                <label class="form-label visually-hidden" for="user-email">Email</label>
+                <input 
+                class="form-input" 
+                type="email" 
+                id="user-email" 
+                name="user-email" 
+                placeholder="Email"
+                required/>
+              </div>
+      
+              <button class="form-button button" type="submit">Отправить</button>
+      
+              <p class="form-terms">Нажимая на кнопку вы соглашаетесь с 
+                <a class="form-terms-link" href="#">политикой конфиденциальности</a>
+              </p>
+      
+            </form>
+
           </div>
 
           <iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.163630435275!2d30.488698376437736!3d50.45667757159344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2z0YPQuy4g0KHQtdGH0LXQstGL0YUg0KHRgtGA0LXQu9GM0YbQvtCyLCA1NCwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1733044533741!5m2!1sru!2sua"
@@ -266,11 +310,58 @@
     </div>
   </footer>
 
-  <div class="backdrop">
+  <div class="backdrop is-hidden">
     <div class="modal">
       <button class="modal-btn-close" type="button">Close</button>
+      <h2>Заказать звонок</h2>
+      <p>Оставьте свой номер телефона и наш специалист свяжется с вами</p>
+      <br>
+      <form name="contact-form" autocomplete="off" novalidate>
+
+        <div class="form-field">
+          <label class="form-label visually-hidden" for="user-name">Имя</label>
+          <input 
+          class="form-input" 
+          type="text" 
+          id="user-name" 
+          name="user-name" 
+          placeholder="Имя"
+          required/>
+        </div>
+          
+        <div class="form-field">
+          <label class="form-label visually-hidden" for="user-tel">Телефон</label>
+          <input 
+          class="form-input" 
+          type="tel" 
+          id="user-tel" 
+          name="user-tel" 
+          placeholder="Телефон"
+          required/>
+        </div>
+        
+        <div class="form-field">
+          <label class="form-label visually-hidden" for="user-email">Email</label>
+          <input 
+          class="form-input" 
+          type="email" 
+          id="user-email" 
+          name="user-email" 
+          placeholder="Email"
+          required/>
+        </div>
+
+        <button class="form-button button" type="submit">Отправить</button>
+
+        <p class="form-terms">Нажимая на кнопку вы соглашаетесь с 
+          <a class="form-terms-link" href="#">политикой конфиденциальности</a>
+        </p>
+
+      </form>
     </div>
   </div>
+
   <script src="./JS/modal.js"></script>
+
 </body>
 </html>
