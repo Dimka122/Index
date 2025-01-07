@@ -215,11 +215,14 @@ ul{
 }
 
 .format-card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   height: 444px;
   border-radius: 8px;
-  border: #465929 2px solid;
   padding: 16px;
-  background-image: linear-gradient(180deg,rgba(49,38,26,0)55.21%,rgba(49,38,26,0.71)72.92%,var(--color-primary-dark)100%);
+  background-image: linear-gradient(180deg,rgba(17, 16, 15, 0)55.21%,rgba(49,38,26,0.71)72.92%,var(--color-primary-dark)100%);
   transition: transform .3s;
 }
 
@@ -228,14 +231,32 @@ ul{
 }
 
 .format-title{
+  color: var(--color-primary-light);
+  margin-bottom: 80px;
+}
+
+.format-title{
   font-size: 24px;
   font-weight: 600;
 }
 
 .format-text{
+  color: var(--color-primary-light);
   font-size: 14px;
   font-weight: 300;
 }
+
+.format-image{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+/*carousel*/
 
 .carousel-button{
   display: flex;
